@@ -15,12 +15,14 @@ class myBank() :
 
     def makeDeposit(self, amount):
         self.Balance += amount
+        print ("Balance for user ", self.Name, " with CIN ", self.CIN, " is :: ", self.Balance)
 
     def makeWithdrawal(self, amount):
         self.Balance -= amount
+        print ("Balance for user ", self.Name, " with CIN ", self.CIN, " is :: ", self.Balance)
 
     def getBalance(self):
-        vBalance = ("Balance for user ", self.Name, " with CIN ", self.CIN, " is :: ", self.Balance)
+        vBalance = "Balance for user ", self.Name, " with CIN ", self.CIN, " is :: ", self.Balance
         return vBalance
 
 p1 = myBank("101", "KK", 250000)

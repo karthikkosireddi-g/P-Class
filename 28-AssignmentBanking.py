@@ -6,6 +6,8 @@
 
 class myBank() :
 
+    myBankName = ""
+    myBankLoc = ""
     def __init__(self, vCIN, vName, vBalance):
         self.CIN = vCIN
         self.Name = vName

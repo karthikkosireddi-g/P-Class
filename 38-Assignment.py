@@ -7,14 +7,8 @@ import json
 
 r1 = requests.get("https://reqres.in/api/users?page=2")
 if (r1.status_code == 200) :
-    # print(r1.json())
-    # print(r1.json()['data'])
-
     d1 = r1.json()['data'] # all Data
-
     e1 = [emails['email'] for emails in d1] # all Emails
-
-    # print (e1)
 
     f1 = open("jData.json", "w")
     f2 = open("jEmail.json", "w")
@@ -22,17 +16,15 @@ if (r1.status_code == 200) :
     json.dump(d1, f1)
     json.dump(e1, f2)
     f1.close()
+    f2.close()
 
     f3 = open("jData.json", "r")
     myData3 = json.load(f3)
     print(myData3)
     print(type(myData3))
 
-
-    # print(r1.json()['data'])
 else :
     print ("Could'nt connect : Status code ", r1.status_code)
-
 
 data = requests.get("https://reqres.in/api/users?page=2").json()['data']
 emailAddresses = [item['id'] for item in data]

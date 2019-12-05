@@ -11,20 +11,46 @@ import json
 bURL = "https://reqres.in/api/users/"
 uURL = []
 
+=======
+'''
+for uID in range(0, 25) :
+    uURL.append(bURL + str(uID))
+
+for eachURL in uURL :
+    print ("Status for ", eachURL, " is - ", requests.get(eachURL).status_code)
+'''
+
+
+
+
+# patch url: https://reqres.in/api/users/2
+# patch json file: patch.json
+
+
 # below is the patch function
 def patch_reqres(filename,url):
     f1 = open(filename,"r")
     f1Data = json.load(f1)
     PatchReq = requests.patch(pURL,f1Data)
     print(PatchReq.text)
+
     print(PatchReq.status_code)
     print(PatchReq.json())
     f1.close()
     return PatchReq
+=======
+    return PatchReq
+    f1.close()
+
+
 
 # here we use the patch function
 filename = "patch.json"
 pURL = "https://reqres.in/api/users/2"
 
+
 print (patch_reqres(filename,pURL))
+=======
+patch_reqres(filename,pURL)
+
 

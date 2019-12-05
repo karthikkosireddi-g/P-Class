@@ -16,4 +16,4 @@ print(myFile.readline())
 
 
 for myText in myFile :
-    print (myText)
+    print ("\n".join(myText))

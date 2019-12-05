@@ -1,10 +1,12 @@
 import json
 
+# load() for reading from a file
 with open("j1.json") as f :
     data = json.load(f)
 
-a = json.loads()
+# a = json.loads() # loads() for reading from local JSON data in your program
 
+# print ("a is ", a)
 print (data)
 print (data["n"])
 print (data['Age'])

@@ -6,6 +6,7 @@ myD1 = webdriver.Chrome(executable_path="C:\\Users\\jcady\\PycharmProjects\\chro
 vURL = "https://10.232.53.39/php/login.php"
 vUN = "p-class"
 vPWD = "Password01"
+print("Automation Testing through Selenium")
 
 myD1.get(vURL)
 myD1.find_element_by_id("user").send_keys(vUN)

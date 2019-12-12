@@ -17,7 +17,7 @@ print ("Headers ", res2.headers)
 
 print ("~~~~~~~~~~~~~~~~~~~~~~~~")
 res3 = requests.get("https://reqres.in/api/users/2")
-print (res3)
+print(res3)
 print (" API Status ", res3.status_code)
 print ("  Cookies ", res3.cookies)
 print ("Headers ", res3.headers)

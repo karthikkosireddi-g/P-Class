@@ -8,13 +8,16 @@ import json
 r1 = requests.get("https://reqres.in/api/users?page=2")
 if (r1.status_code == 200) :
     d1 = r1.json()['data'] # all Data
-    e1 = [emails['email'] for emails in d1] # all Emails
+    print(d1)
+    e1 = [e1['email'] for e1 in d1] # all Emails
+    print(e1)
 
     f1 = open("jData.json", "w")
     f2 = open("jEmail.json", "w")
 
-    json.dump(d1, f1)
+    json.dump(d1, f1) # JSON dumps JSON data into a JSON file
     json.dump(e1, f2)
+
     f1.close()
     f2.close()
 
